@@ -1,0 +1,253 @@
+.overview-grid {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.9fr) minmax(420px, 1.45fr) minmax(285px, 0.95fr);
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.identity-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+}
+
+.identity-list div {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.identity-list dt {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.identity-list dd {
+  min-width: 0;
+  margin: 0;
+  color: var(--ink);
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.alias-block {
+  margin-top: 18px;
+}
+
+.company-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 100%;
+  margin-top: 18px;
+  color: var(--blue);
+  font-weight: 800;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.score-layout {
+  display: grid;
+  grid-template-columns: 168px 1fr;
+  gap: 18px;
+  align-items: center;
+}
+
+.risk-gauge {
+  position: relative;
+  display: grid;
+  width: 168px;
+  aspect-ratio: 1;
+  place-items: center;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--risk-color) var(--score),
+    var(--surface-strong) 0
+  );
+}
+
+.risk-gauge::after {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--surface);
+}
+
+.risk-gauge-body {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+}
+
+.risk-gauge-body strong {
+  color: var(--ink);
+  font-size: 46px;
+  line-height: 0.95;
+}
+
+.risk-gauge-body span {
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.score-copy {
+  display: grid;
+  gap: 16px;
+  color: var(--muted-strong);
+  line-height: 1.55;
+}
+
+.trend-chart {
+  width: 100%;
+  height: 190px;
+  margin-top: 20px;
+  overflow: visible;
+}
+
+.trend-chart line {
+  stroke: var(--line);
+  stroke-width: 1;
+}
+
+.trend-chart polygon {
+  fill: rgba(28, 138, 166, 0.12);
+}
+
+.trend-chart polyline {
+  fill: none;
+  stroke: var(--cyan);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 4;
+}
+
+.trend-chart circle {
+  fill: var(--surface);
+  stroke: var(--cyan);
+  stroke-width: 3;
+}
+
+.trend-chart text {
+  fill: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.source-list {
+  display: grid;
+  gap: 12px;
+}
+
+.source-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.source-item strong,
+.source-item span {
+  display: block;
+}
+
+.source-item strong {
+  color: var(--ink);
+}
+
+.source-item div > span {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.source-status {
+  align-self: start;
+  padding: 3px 7px;
+  border-radius: 999px;
+  color: var(--muted-strong);
+  background: var(--surface-soft);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.status-fresh {
+  color: var(--green);
+  background: rgba(32, 122, 76, 0.1);
+}
+
+.status-cached {
+  color: var(--violet);
+  background: rgba(103, 87, 200, 0.11);
+}
+
+.status-pending {
+  color: var(--amber);
+  background: rgba(183, 121, 31, 0.11);
+}
+
+.source-bar {
+  grid-column: 1 / -1;
+  height: 8px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--surface-strong);
+}
+
+.source-bar span {
+  display: block;
+  width: var(--source-progress);
+  height: 100%;
+  border-radius: inherit;
+  background: var(--cyan);
+}
+
+.pipeline-list {
+  display: grid;
+  gap: 10px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pipeline-step {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 10px;
+  align-items: start;
+}
+
+.pipeline-step > span {
+  width: 14px;
+  height: 14px;
+  margin-top: 4px;
+  border: 3px solid var(--line-strong);
+  border-radius: 50%;
+  background: var(--surface);
+}
+
+.step-done > span {
+  border-color: var(--green);
+  background: var(--green);
+}
+
+.step-active > span {
+  border-color: var(--blue);
+  background: var(--surface);
+}
+
+.pipeline-step strong {
+  color: var(--ink);
+}
+
+.pipeline-step p {
+  color: var(--muted);
+  font-size: 13px;
+}

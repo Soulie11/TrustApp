@@ -1,0 +1,118 @@
+@media (max-width: 1240px) {
+  .search-console,
+  .overview-grid,
+  .insight-grid,
+  .article-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .field-search,
+  .risk-panel,
+  .sources-panel,
+  .insight-section,
+  .network-panel,
+  .evidence-section {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 780px) {
+  .app-shell {
+    padding: 10px;
+  }
+
+  .topbar,
+  .brand,
+  .score-layout,
+  .section-heading {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .topbar {
+    position: static;
+  }
+
+  .top-actions,
+  .search-console,
+  .overview-grid,
+  .insight-grid,
+  .finding-grid,
+  .article-grid,
+  .metric-row {
+    grid-template-columns: 1fr;
+  }
+
+  .top-actions {
+    display: grid;
+    width: 100%;
+  }
+
+  .score-layout {
+    display: grid;
+    justify-items: center;
+  }
+
+  .option-row {
+    align-items: stretch;
+  }
+
+  .api-badge,
+  .file-chip,
+  .toggle,
+  .toggle span,
+  .ghost-action,
+  .primary-action {
+    width: 100%;
+  }
+
+  .api-badge {
+    margin-left: 0;
+  }
+
+  .api-badge p {
+    white-space: normal;
+  }
+
+  .keyword-item {
+    grid-template-columns: 1fr;
+  }
+
+  .keyword-item b {
+    text-align: left;
+  }
+
+  .network-workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .network-map-topline {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .network-hint {
+    white-space: normal;
+  }
+}
+
+@media print {
+  .topbar,
+  .command-band,
+  .export-actions {
+    display: none;
+  }
+
+  .app-shell {
+    padding: 0;
+  }
+
+  .panel,
+  .network-panel,
+  .article-card,
+  .finding-list,
+  .keyword-item {
+    box-shadow: none;
+    break-inside: avoid;
+  }
+}

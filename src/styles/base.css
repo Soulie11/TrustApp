@@ -1,0 +1,218 @@
+.app-shell {
+  width: min(1520px, 100%);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 18px;
+}
+
+.topbar,
+.command-band,
+.panel,
+.network-panel {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.panel,
+.network-panel {
+  padding: 18px;
+}
+
+.brand-mark svg,
+.panel-heading > svg,
+.input-frame svg,
+.primary-action svg,
+.ghost-action svg,
+.file-chip svg,
+.company-link svg {
+  width: 20px;
+  height: 20px;
+}
+
+.eyebrow,
+.micro-label {
+  margin: 0 0 5px;
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1 {
+  color: var(--ink);
+  font-size: 28px;
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+h2 {
+  color: var(--ink);
+  font-size: 21px;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+h3 {
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.35;
+  letter-spacing: 0;
+}
+
+.panel-heading,
+.section-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.panel-heading > svg {
+  flex: 0 0 auto;
+  color: var(--blue);
+}
+
+.section-heading {
+  margin-bottom: 14px;
+}
+
+.primary-action,
+.ghost-action,
+.file-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 46px;
+  border-radius: 7px;
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.ghost-action {
+  min-height: 38px;
+  padding: 0 11px;
+  border: 1px solid var(--line-strong);
+  color: var(--muted-strong);
+  background: var(--surface);
+  font-size: 13px;
+}
+
+.ghost-action:hover {
+  color: var(--ink);
+  border-color: var(--blue);
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 4px 9px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted-strong);
+  background: var(--surface-soft);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.risk-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 12px;
+  border-radius: 999px;
+  color: var(--risk-color);
+  background: var(--risk-bg);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.risk-low {
+  --risk-color: var(--green);
+  --risk-bg: rgba(32, 122, 76, 0.1);
+}
+
+.risk-medium {
+  --risk-color: var(--amber);
+  --risk-bg: rgba(183, 121, 31, 0.12);
+}
+
+.risk-high {
+  --risk-color: var(--red);
+  --risk-bg: rgba(196, 59, 49, 0.1);
+}
+
+.risk-critical {
+  --risk-color: #8d1b22;
+  --risk-bg: rgba(141, 27, 34, 0.12);
+}
+
+.metric-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.metric {
+  display: grid;
+  gap: 4px;
+  min-height: 72px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface-soft);
+}
+
+.metric span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.metric strong {
+  color: var(--ink);
+  font-size: 17px;
+  overflow-wrap: anywhere;
+}
+
+.network-count {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 10px;
+  border-radius: 999px;
+  color: var(--violet);
+  background: rgba(103, 87, 200, 0.11);
+  font-size: 12px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.spin-icon {
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,65 @@
+.evidence-section {
+  margin-top: 16px;
+  padding-bottom: 32px;
+}
+
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.article-card {
+  display: grid;
+  gap: 12px;
+  min-height: 285px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-left: 5px solid var(--sentiment-color);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.sentiment-negative {
+  --sentiment-color: var(--red);
+}
+
+.sentiment-neutral {
+  --sentiment-color: var(--amber);
+}
+
+.sentiment-positive {
+  --sentiment-color: var(--green);
+}
+
+.article-topline,
+.article-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.article-card p {
+  color: var(--muted-strong);
+  line-height: 1.48;
+}
+
+.article-card .chip-row {
+  align-content: start;
+}
+
+.article-footer {
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  text-transform: none;
+}
+
+.sentiment-label {
+  color: var(--sentiment-color);
+}
